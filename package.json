@@ -1,0 +1,24 @@
+{
+  "name": "1dv610-l1",
+  "version": "1.0.0",
+  "description": "Assignment L1",
+  "homepage": "https://github.com/arvid-e/1dv610-L1#readme",
+  "bugs": {
+    "url": "https://github.com/arvid-e/1dv610-L1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvid-e/1dv610-L1.git"
+  },
+  "license": "ISC",
+  "author": "Arvid Edvinsson",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc && node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
