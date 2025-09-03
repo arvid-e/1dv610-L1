@@ -1,12 +1,12 @@
-import * as readline from 'readline';
+import { GameService } from "./services/GameService.js";
+import { WeatherService } from "./services/WeatherService.js";
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const gameService = new GameService();
+const weatherService = new WeatherService();
 
-rl.question('What is your name? ', (name: string) => {
-  console.log(`Hello ${name}!`)
+const name = await gameService.askForName();
+const city = await gameService.askForCity();
+const { temperature } = await weatherService.getWeatherData(city);
+const guess = await gameService.askForTemperature();
 
-  process.exit(0);
-});
+gameService.getResults(name, city, guess, temperature);
